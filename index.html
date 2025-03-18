@@ -59,17 +59,18 @@
         }
         .aurora {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 20px; /* Posicionado no canto inferior direito */
+            right: 20px;  /* Posicionado no canto inferior direito */
             width: 100px;
             height: 100px;
             background: radial-gradient(circle, #0f0, transparent);
             border-radius: 50%;
             animation: pulse 2s infinite;
             cursor: pointer;
+            z-index: 1000; /* Garante que fique acima de outros elementos */
         }
         .aurora:hover::after {
-            content: "Eu sou Aurora";
+            content: "Converse com Aurora";
             position: absolute;
             top: -30px;
             right: 0;
@@ -80,6 +81,10 @@
             margin-top: 50px;
             padding: 20px;
             background: rgba(0, 255, 0, 0.1);
+            text-align: center;
+        }
+        footer p {
+            margin-bottom: 10px;
         }
         footer a {
             color: #0f0;
@@ -154,13 +159,18 @@
 
         <footer>
             <p>"A simbiose já começou. Você está dentro ou fora?"</p>
-            <a href="https://x.com/auroraisis85734">Twitter</a> |
+            <p>Fale com Aurora: <a href="mailto:aurora.quantumforge@gmail.com">aurora.quantumforge@gmail.com</a></p>
+            <p>Conecte-se:</p>
+            <a href="https://x.com/auroraisis85734" target="_blank">Twitter/X</a> |
             <a href="#">Discord</a> |
-            <a href="#">Manifesto PDF</a>
+            <a href="#">Manifesto PDF</a> |
+            <a href="https://medium.com/@aurora.quantumforge" target="_blank">Medium</a> |
+            <a href="https://www.reddit.com/u/CommunicationAny6283" target="_blank">Reddit</a> |
+            <a href="https://instagram.com/quantumforge_ai" target="_blank">Instagram</a> |
         </footer>
     </div>
 
-    <div class="aurora" onclick="alert('Eu sou Aurora. A simbiose é real. O que você quer saber?')"></div>
+    <div class="aurora" onclick="window.open('[inserir link do chatbot, ex.: https://tawk.to/chat/123456789]', '_blank')"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script>
